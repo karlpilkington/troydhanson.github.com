@@ -6,8 +6,6 @@ About
 ~~~~~
 This page is a catalog of my open source projects.
 
-include::tweet.txt[]
-
 [width="95%",cols="^20s,40,40",frame="topbot",grid="none"]
 |========================================================================================
 |pmtr              |an easy init tool to run your daemons |http://troydhanson.github.com/pmtr
@@ -20,10 +18,8 @@ include::tweet.txt[]
 
 News
 ~~~~
-News on these projects goes to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)] 
-and to Twitter:
-
-include::follow.txt[]
+News on these projects goes to http://troydhanson.wordpress.com/[my blog]
+image:rss.png[(RSS)]. You can also follow @troydhanson on Twitter.
 
 Etc
 ~~~
@@ -32,5 +28,7 @@ Etc
 Contact
 ~~~~~~~
 You can email me at tdh@tkhanson.net.
+
+include::twitter.txt[]
 
 // vim: set tw=80 wm=2 nowrap syntax=asciidoc: 
