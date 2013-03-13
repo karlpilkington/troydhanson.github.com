@@ -6,6 +6,13 @@ About
 ~~~~~
 This page is a catalog of my open source projects.
 
+ifdef::backend-html5[]
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<a href="https://twitter.com/share" class="twitter-share-button" style="float:right" data-via="troydhanson">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+endif::backend-html5[]
+
 [width="95%",cols="^20s,40,40",frame="topbot",grid="none"]
 |========================================================================================
 |pmtr              |an easy init tool to run your daemons |http://troydhanson.github.com/pmtr
@@ -16,11 +23,10 @@ This page is a catalog of my open source projects.
 |zcontrol          |a ØMQ/ZeroMQ control port library     |http://troydhanson.github.com/zcontrol
 |========================================================================================
 
-News
-~~~~
-News and updates about these projects are posted to 
-http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)]. You can also
-follow https://twitter.com/troydhansoni[@troydhanson] on Twitter.
+News & Contact
+~~~~~~~~~~~~~~
+I post news on these projects to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)] 
+and @troydhanson on Twitter:
 
 ifdef::backend-html5[]
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -29,12 +35,10 @@ ifdef::backend-html5[]
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 endif::backend-html5[]
 
+You can email me at tdh@tkhanson.net.
+
 Etc
 ~~~
 * My link:virtual_memory.pdf[Virtual Memory in a Nutshell] slides (pdf). Related http://troydhanson.wordpress.com/2010/07/18/virtual-memory-in-a-nutshell[post].
-
-Contact
-~~~~~~~
-Contact the author at tdh@tkhanson.net
 
 // vim: set tw=80 wm=2 nowrap syntax=asciidoc: 
