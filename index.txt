@@ -22,7 +22,7 @@ Etc
 
 News
 ~~~~
-I post news on these projects to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)] and to Twitter. 
+I tweet news on these projects and post to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)].
 
 include::twitter.txt[]
 
