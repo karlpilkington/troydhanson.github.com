@@ -6,12 +6,7 @@ About
 ~~~~~
 This page is a catalog of my open source projects.
 
-ifdef::backend-xhtml11[]
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-<a href="https://twitter.com/share" class="twitter-share-button" style="float:right" data-via="troydhanson">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-endif::backend-xhtml11[]
+include::tweet.txt[]
 
 [width="95%",cols="^20s,40,40",frame="topbot",grid="none"]
 |========================================================================================
@@ -23,22 +18,19 @@ endif::backend-xhtml11[]
 |zcontrol          |a ØMQ/ZeroMQ control port library     |http://troydhanson.github.com/zcontrol
 |========================================================================================
 
-News & Contact
-~~~~~~~~~~~~~~
-I post news on these projects to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)] 
-and @troydhanson on Twitter:
+News
+~~~~
+News on these projects goes to http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)] 
+and to Twitter:
 
-ifdef::backend-xhtml11[]
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-<a href="https://twitter.com/troydhanson" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @troydhanson</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-endif::backend-xhtml11[]
-
-You can email me at tdh@tkhanson.net.
+include::follow.txt[]
 
 Etc
 ~~~
 * My link:virtual_memory.pdf[Virtual Memory in a Nutshell] slides (pdf). Related http://troydhanson.wordpress.com/2010/07/18/virtual-memory-in-a-nutshell[post].
+
+Contact
+~~~~~~~
+You can email me at tdh@tkhanson.net.
 
 // vim: set tw=80 wm=2 nowrap syntax=asciidoc: 
