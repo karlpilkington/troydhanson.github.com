@@ -25,10 +25,6 @@ Etc
 ~~~
 * My link:virtual_memory.pdf[Virtual Memory in a Nutshell] slides (pdf). Related http://troydhanson.wordpress.com/2010/07/18/virtual-memory-in-a-nutshell[post].
 
-Contact
-~~~~~~~
-You can email me at tdh@tkhanson.net.
-
 include::twitter.txt[]
 
 // vim: set tw=80 wm=2 nowrap syntax=asciidoc: 
