@@ -8,25 +8,28 @@ This page is a catalog of my open source projects.
 
 [width="95%",cols="^20s,40,40",frame="topbot",grid="none"]
 |========================================================================================
-|kvspool           |tools for streaming data      |http://troydhanson.github.com/kvspool
-|pmtr              |a process monitor for daemons |http://troydhanson.github.com/pmtr
-|uthash            |a hash table for C structures |http://uthash.sourceforge.net
-|tpl               |binary messaging for C        |http://tpl.sourceforge.net
-|scripts & snippets|reusable bits of C and Perl   |http://tkhanson.net/misc
-|zcontrol          |a ØMQ control port library    |http://troydhanson.github.com/zcontrol
+|pmtr              |an easy init tool to run your daemons |http://troydhanson.github.com/pmtr
+|uthash            |a hash table for C structures         |http://troydhanson.github.com/uthash
+|tpl               |binary serialization for C            |http://troydhanson.github.com/tpl
+|scripts & snippets|reusable bits of C, scripts, etc      |http://troydhanson.github.com/misc
+|kvspool           |a streaming data library              |http://troydhanson.github.com/kvspool
+|zcontrol          |a ØMQ/ZeroMQ control port library     |http://troydhanson.github.com/zcontrol
 |========================================================================================
+
+News
+~~~~
+News and updates about these projects are posted to 
+http://troydhanson.wordpress.com/[my blog] image:rss.png[(RSS)]. You can also
+follow https://twitter.com/troydhansoni[@troydhanson] on Twitter.
+<a href="https://twitter.com/troydhanson" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @troydhanson</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 Etc
 ~~~
 * My link:virtual_memory.pdf[Virtual Memory in a Nutshell] slides (pdf). Related http://troydhanson.wordpress.com/2010/07/18/virtual-memory-in-a-nutshell[post].
 
-Other resources
-~~~~~~~~~~~~~~~
-News::
- News and updates about these projects are posted to the 
- http://troydhanson.wordpress.com/[author's blog] image:rss.png[(RSS)].
-
-Contact::
- Contact the author at tdh@tkhanson.net
+Contact
+~~~~~~~
+Contact the author at tdh@tkhanson.net
 
 // vim: set tw=80 wm=2 nowrap syntax=asciidoc: 

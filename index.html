@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="AsciiDoc 8.6.6">
+<meta name="generator" content="AsciiDoc 8.6.8">
 <title></title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -86,10 +86,14 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
 }
+
 
 #author {
   color: #527bbd;
@@ -218,7 +222,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -348,7 +352,7 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -406,17 +410,13 @@ span.underline { text-decoration: underline; }
 span.overline { text-decoration: overline; }
 span.line-through { text-decoration: line-through; }
 
+div.unbreakable { page-break-inside: avoid; }
+
 
 /*
  * xhtml11 specific
  *
  * */
-
-tt {
-  font-family: monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 div.tableblock {
   margin-top: 1.0em;
@@ -450,12 +450,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -536,6 +530,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -580,7 +576,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -609,7 +605,7 @@ toc: function (toclevels) {
   var i;
   for (i = 0; i < toc.childNodes.length; i++) {
     var entry = toc.childNodes[i];
-    if (entry.nodeName == 'div'
+    if (entry.nodeName.toLowerCase() == 'div'
      && entry.getAttribute("class")
      && entry.getAttribute("class").match(/^toclevel/))
       tocEntriesToRemove.push(entry);
@@ -655,7 +651,7 @@ footnotes: function () {
   var entriesToRemove = [];
   for (i = 0; i < noteholder.childNodes.length; i++) {
     var entry = noteholder.childNodes[i];
-    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
       entriesToRemove.push(entry);
   }
   for (i = 0; i < entriesToRemove.length; i++) {
@@ -752,37 +748,47 @@ width:95%;
 <col style="width:40%;">
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>kvspool</strong></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock">tools for streaming data</p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/kvspool">http://troydhanson.github.com/kvspool</a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>pmtr</strong></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock">a process monitor for daemons</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">an easy init tool to run your daemons</p></td>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/pmtr">http://troydhanson.github.com/pmtr</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>uthash</strong></p></td>
 <td class="tableblock halign-left valign-top" ><p class="tableblock">a hash table for C structures</p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://uthash.sourceforge.net">http://uthash.sourceforge.net</a></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/uthash">http://troydhanson.github.com/uthash</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>tpl</strong></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock">binary messaging for C</p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://tpl.sourceforge.net">http://tpl.sourceforge.net</a></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">binary serialization for C</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/tpl">http://troydhanson.github.com/tpl</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>scripts &amp; snippets</strong></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock">reusable bits of C and Perl</p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://tkhanson.net/misc">http://tkhanson.net/misc</a></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">reusable bits of C, scripts, etc</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/misc">http://troydhanson.github.com/misc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>kvspool</strong></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">a streaming data library</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/kvspool">http://troydhanson.github.com/kvspool</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" ><p class="tableblock"><strong>zcontrol</strong></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock">a ØMQ control port library</p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">a ØMQ/ZeroMQ control port library</p></td>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><a href="http://troydhanson.github.com/zcontrol">http://troydhanson.github.com/zcontrol</a></p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="_news">News</h3>
+<div class="paragraph"><p>News and updates about these projects are posted to
+<a href="http://troydhanson.wordpress.com/">my blog</a> <span class="image">
+<img src="rss.png" alt="(RSS)">
+</span>. You can also
+follow <a href="https://twitter.com/troydhansoni">@troydhanson</a> on Twitter.
+&lt;a href="https://twitter.com/troydhanson" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"&gt;Follow @troydhanson&lt;/a&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}(document,"script","twitter-wjs");&lt;/script&gt;</p></div>
 </div>
 <div class="sect2">
 <h3 id="_etc">Etc</h3>
@@ -795,28 +801,8 @@ My <a href="virtual_memory.pdf">Virtual Memory in a Nutshell</a> slides (pdf). R
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_other_resources">Other resources</h3>
-<div class="dlist"><dl>
-<dt class="hdlist1">
-News
-</dt>
-<dd>
-<p>
- News and updates about these projects are posted to the
- <a href="http://troydhanson.wordpress.com/">author&#8217;s blog</a> <span class="image">
-<img src="rss.png" alt="(RSS)">
-</span>.
-</p>
-</dd>
-<dt class="hdlist1">
-Contact
-</dt>
-<dd>
-<p>
- Contact the author at <a href="mailto:tdh@tkhanson.net">tdh@tkhanson.net</a>
-</p>
-</dd>
-</dl></div>
+<h3 id="_contact">Contact</h3>
+<div class="paragraph"><p>Contact the author at <a href="mailto:tdh@tkhanson.net">tdh@tkhanson.net</a></p></div>
 </div>
 </div>
 </div>
@@ -824,7 +810,7 @@ Contact
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-02-29 21:52:13 EST
+Last updated 2013-03-13 00:12:06 EDT
 </div>
 </div>
 </body>
